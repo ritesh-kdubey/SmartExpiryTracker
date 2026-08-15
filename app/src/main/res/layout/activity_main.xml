@@ -5,15 +5,94 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/homescreenbgcimg"
+    >
+<ImageButton
+    android:id="@+id/btnMenu"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="24dp"
+    android:background="@android:color/transparent"
+    android:src="@drawable/baseline_menu_24"
+    android:contentDescription="Menu"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+/>
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Smart Expiry Tracker"
+        android:textColor="#174D2A"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/btnMenu"
+        app:layout_constraintEnd_toStartOf="@id/btnNotification"
+        app:layout_constraintTop_toTopOf="@id/btnMenu"
+        app:layout_constraintBottom_toBottomOf="@id/btnMenu"
+
+        />
+
 
     <TextView
+        android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Never miss an expiry date"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        />
+
+
+    <Button
+    android:id="@+id/btnAddItem"
+    android:layout_width="220dp"
+    android:layout_height="55dp"
+    android:text="+ Add Item"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:backgroundTint="#174D2A"
+    android:layout_marginTop="24dp"
+    app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+        />
+    <Button
+        android:id="@+id/btnViewItems"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="View Items"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#174D2A"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnAddItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+/>
+        <ImageButton
+            android:id="@+id/btnNotification"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_notifications_24"
+            android:contentDescription="Notifications"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnMenu"
+            app:layout_constraintBottom_toBottomOf="@id/btnMenu"
+            />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
