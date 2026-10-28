@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Dashboard_MainActivity"
     android:background="@drawable/homescreenbgcimg"
     >
 <ImageButton
@@ -13,7 +13,7 @@
     android:layout_width="48dp"
     android:layout_height="48dp"
     android:layout_marginStart="12dp"
-    android:layout_marginTop="24dp"
+    android:layout_marginTop="20dp"
     android:background="@android:color/transparent"
     android:src="@drawable/baseline_menu_24"
     android:contentDescription="Menu"
@@ -53,34 +53,232 @@
         />
 
 
+
     <Button
-    android:id="@+id/btnAddItem"
-    android:layout_width="220dp"
-    android:layout_height="55dp"
-    android:text="+ Add Item"
-    android:textSize="16sp"
-    android:textStyle="bold"
-    android:textColor="@android:color/white"
-    android:backgroundTint="#174D2A"
-    android:layout_marginTop="24dp"
-    app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/cardExpSoon"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Expirying Soon"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="#174D2A"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="+ Add Item"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#174D2A"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardExpSoon"
+        app:layout_constraintEnd_toEndOf="parent"
         />
+
     <Button
         android:id="@+id/btnViewItems"
         android:layout_width="160dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:text="View Items"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#174D2A"
-        android:backgroundTint="#FFFFFF"
-        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#174D2A"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintTop_toBottomOf="@id/btnAddItem"
+        app:layout_constraintStart_toStartOf="@id/btnAddItem"
+      />
+
+    <!-- Overview -->
+    <LinearLayout
+        android:id="@+id/overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/btnViewItems"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-/>
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!--Overview Heading-->
+    <TextView
+        android:id="@+id/textOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overview"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!--Cards Row-->
+    <LinearLayout
+        android:id="@+id/cardBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/overview"
+        android:layout_marginTop="2dp"
+        >
+
+           <!-- Cards 1 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTotal"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="Total Items"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Cards 2 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardExpiry"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <!-- Card ka title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiring Soon"
+                    android:textSize="14sp" />
+
+                <!-- Expiring items ki count -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Cards 3 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardExpired"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="Expired"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Cards 4 -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSaved"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:text="Saved"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+
+    <!--Categories Section-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/cardBox">
+        <!-- Categories Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+        />
+
+    </LinearLayout>
+    <!-- Cards Rows -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+
+
+
         <ImageButton
             android:id="@+id/btnNotification"
             android:layout_width="48dp"
@@ -93,6 +291,7 @@
             app:layout_constraintTop_toTopOf="@id/btnMenu"
             app:layout_constraintBottom_toBottomOf="@id/btnMenu"
             />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

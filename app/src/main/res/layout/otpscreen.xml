@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C8E6C9">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-light"
+        android:background="@drawable/ettextbox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="15dp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ivOtpLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:contentDescription="OTP Validation"
+        android:src="@color/primary_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvOtpTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the 6-digit code sent to your email"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@+id/ivOtpLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp">
+        
+    </TextView>
+    
+    <EditText
+        android:id="@+id/etOtpInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="18sp"
+        android:maxLength="6"
+        android:hint="0"
+        app:layout_constraintTop_toBottomOf="@+id/tvOtpTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/tvDontReceiveOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't receive the code?"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toBottomOf="@+id/etOtpInput"
+        app:layout_constraintStart_toStartOf="@+id/tvOtpTittle"
+        app:layout_constraintEnd_toEndOf="@+id/tvOtpTittle"
+        android:layout_marginTop="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend(00:30)"
+        android:textSize="12sp"
+        android:textColor="#2E7D32"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@+id/etOtpInput"
+        app:layout_constraintStart_toEndOf="@id/tvDontReceiveOtp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp">
+
+    </TextView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="verify"
+        style="@style/PrimaryButton"
+        app:layout_constraintTop_toBottomOf="@id/tvResend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="195dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Login"
+        android:textColor="#2E7D32"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerify"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+    </TextView>
+        
+
+</androidx.constraintlayout.widget.ConstraintLayout>

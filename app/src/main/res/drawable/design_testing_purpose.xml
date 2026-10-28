@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<stroke android:color="#f5f5f5"
+    android:width="17dp">
+
+</stroke>
+    <stroke android:width="4dp">
+
+    </stroke>
+ <corners android:radius="@null"
+     android:topLeftRadius="300dp"
+     android:topRightRadius="15dp"
+     android:bottomRightRadius="15dp"
+     android:bottomLeftRadius="300dp">
+
+ </corners>
+    <gradient android:startColor="#DFC0"
+        android:endColor="@color/cardview_light_background"
+        android:centerColor="#D5FC"
+        android:centerX="50%"
+        android:centerY="90%"
+        android:type="linear">
+
+    </gradient>
+</shape>
+
+
+
+<!--        android:type=""-->
+<!--        android:centerY="90%"-->
+<!--        android:centerX="90%"-->
+<!--android:gradientRadius="150dp"-->
+<!--        android:startColor="#f5f5f5"-->
+<!--        android:centerColor="@color/primary_green"-->
+<!--        android:endColor="#fff"-->
+
+
+
+<!--    </gradient>

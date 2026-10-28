@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C8E6C9">
+    
+    <ImageView
+        android:id="@+id/ivWelcomeLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:contentDescription="Welcome Logo"
+        android:src="@color/primary_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="105dp">
+
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvWelcomeTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Smart Expiry Tracker  "
+        android:textSize="32sp"
+        android:textColor="#4F6355"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/ivWelcomeLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvWelcomeDescription"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Keep Track of expiry dates and reduce Wastage"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeTittle">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="   Get Started   "
+        android:fontFamily="sans-serif"
+        style="@style/PrimaryButton"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="175dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+    <TextView
+        android:id="@+id/tvAlreadyHaveAnAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Have An Account?"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="37dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvbtnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#2E7D32"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/tvAlreadyHaveAnAcc"
+        app:layout_constraintStart_toEndOf="@id/tvAlreadyHaveAnAcc"
+        android:layout_marginStart="5dp">
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

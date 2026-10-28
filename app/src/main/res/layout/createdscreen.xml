@@ -1,0 +1,66 @@
+]<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C8E6C9">
+
+    <ImageView
+        android:id="@+id/ivCreatedSuccessfullyLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="Account Created Successfully"
+        android:background="@color/primary_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="110dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvCreatedSuccessfullyTittle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Account Created Successfully!"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@+id/ivCreatedSuccessfullyLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvCreatedSuccessfullySubTittle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Your account has been created. You can now login to continue."
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreatedSuccessfullyTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUpdatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to login"
+        style="@style/PrimaryButton"
+        app:layout_constraintTop_toBottomOf="@id/tvCreatedSuccessfullySubTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+    </com.google.android.material.button.MaterialButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
