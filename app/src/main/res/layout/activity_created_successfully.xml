@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F8F1">
+
+    <!-- Success Icon Circle -->
+    <ImageView
+        android:id="@+id/ivCreatedSuccessfullyLogo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/bg_success_circle"
+        android:scaleType="fitCenter"
+        android:padding="25dp"
+        android:background="@drawable/bg_success_circle"
+        android:contentDescription="Account created successfully"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="125dp" />
+
+    <!-- Success Title -->
+    <TextView
+        android:id="@+id/tvCreatedSuccessfullyTittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Account Created!"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textColor="#1B5E20"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ivCreatedSuccessfullyLogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tvCreatedSuccessfullySubTittle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Congratulations! Your account has been created successfully. You can now login to continue."
+        android:textSize="15sp"
+        android:textColor="#607064"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvCreatedSuccessfullyTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp" />
+
+    <!-- Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToLogin"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Go to Login"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="14dp"
+        app:backgroundTint="#2E7D32"
+        app:layout_constraintTop_toBottomOf="@id/tvCreatedSuccessfullySubTittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- Footer -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Expiry Tracker"
+        android:textSize="13sp"
+        android:textColor="#789078"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
