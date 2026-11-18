@@ -55,10 +55,7 @@ class AuthActivity : AppCompatActivity() {
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnLogin = findViewById<View>(R.id.btnLogin)
 
-        // Back Button
-        findViewById<View>(R.id.btnBack).setOnClickListener {
-            showWelcomeScreen()
-        }
+
 
         // Signup Navigation
         findViewById<TextView>(R.id.tvSignUp).setOnClickListener {

@@ -61,10 +61,14 @@
                         android:id="@+id/cardOtpLogo"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp"
-                        app:cardBackgroundColor="#E8F5E9">
+                        app:cardBackgroundColor="#E8F5E9"
+
+                        app:layout_constraintBottom_toTopOf="@id/tvVerifyEmail"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
 
                         <ImageView
                             android:id="@+id/ivOtpLogo"
@@ -79,7 +83,7 @@
 
                     <!-- Title -->
                     <TextView
-                        android:id="@+id/tvOtpTittle"
+                        android:id="@+id/tvVerifyEmail"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="Verify Your Email"
@@ -102,7 +106,7 @@
                         android:textColor="#616161"
                         android:gravity="center"
                         android:lineSpacingExtra="4dp"
-                        app:layout_constraintTop_toBottomOf="@id/tvOtpTittle"
+                        app:layout_constraintTop_toBottomOf="@id/tvVerifyEmail"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginTop="12dp" />
